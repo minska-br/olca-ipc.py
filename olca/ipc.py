@@ -155,11 +155,11 @@ class Client(object):
     ----------
 
     port: int, optional
-        The port of the server connection; optional, defaults to 8080.
+        The url of the server connection; optional, defaults to http://localhost:8080.
     """
 
-    def __init__(self, port: int = 8080):
-        self.url = 'http://localhost:%i' % port
+    def __init__(self, url: str = "http://localhost:8080"):
+        self.url = url
         self.next_id = 1
 
     def __enter__(self):
